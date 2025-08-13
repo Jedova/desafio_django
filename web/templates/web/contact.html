@@ -18,5 +18,8 @@
         
         <button type="submit">Enviar</button>
     </form>
+    {% if Completado %}
+        <p>¡Gracias {{ nombre }}, !Recibimos tu mensaje!</p>
+    {% endif %}
 </body>
 </html>
