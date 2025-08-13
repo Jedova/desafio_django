@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-zm)2g=h@@k46$y$a-$4bal1qy@(f+m02h@f&k340#(3h0n$-hw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://localhost:8000",
+]
 
 
 # Application definition
@@ -55,7 +59,7 @@ ROOT_URLCONF = 'proyecto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "template"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
